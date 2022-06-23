@@ -1,0 +1,22 @@
+.main-subintro {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__title {
+    max-width: 380px;
+  }
+  &__desc {
+    max-width: 390px;
+  }
+  &__inner {
+    display: flex;
+    margin: 0 -30px;
+  }
+  &__item {
+    width: calc(100% / 3);
+    padding: 0 30px;
+  }
+}

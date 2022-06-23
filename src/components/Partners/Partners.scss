@@ -1,0 +1,29 @@
+.partners {
+  padding-top: 205px;
+  &__title-wrapper {
+    margin-bottom: 50px;
+  }
+  &-slider {
+    pointer-events: none;
+    &--normal {
+      border-top: 1px solid #5A5A74;
+      border-bottom: 1px solid #5A5A74;
+    }
+    &--reverse {
+      border-bottom: 1px solid #5A5A74;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    &__item {
+      width: 305px;
+      height: 145px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & + & {
+        border-left: 1px solid #5A5A74;
+      }
+    }
+  }
+}

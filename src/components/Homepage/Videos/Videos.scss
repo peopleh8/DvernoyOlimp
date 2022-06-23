@@ -1,0 +1,9 @@
+.main-videos {
+  padding-top: 135px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}

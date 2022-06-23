@@ -1,0 +1,21 @@
+.products-slider {
+  padding-top: 120px;
+  &__top {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+  }
+  &__wrapper {
+  }
+  &-list {
+    &::before {
+      right: 100%
+    }
+    &::after {
+      left: 100%
+    }
+  }
+}

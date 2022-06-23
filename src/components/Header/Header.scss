@@ -1,0 +1,297 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  &-top {
+    background: #333342;
+    padding: 12px 0 13px;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__controls {
+      display: flex;
+      align-items: center;
+      margin: 0 55px 0 auto;
+      &-item {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        &:nth-child(1) {
+          .header-top__controls-icon {
+            width: 21px;
+            height: 9px;
+          }
+        }
+        &:nth-child(2) {
+          margin-left: 35px;
+          .header-top__controls-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        @media (min-width: 1024px) {
+          &:hover {
+            .header-top__controls-text {
+              color: #A4AC14;
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            .header-top__controls-text {
+              color: #A4AC14;
+            }
+          }
+        }
+      }
+      &-icon {
+        display: block;
+        margin-right: 10px;
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          fill: #A4AC14;
+        }
+      }
+      &-text {
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fff;
+        @media (min-width: 1024px) {
+          transition: color .2s ease;
+        }
+        @media (max-width: 1024px) {
+          transition: color .1s ease;
+        }
+      }
+    }
+  }
+  &-bot {
+    background: #424255;
+    padding: 11px 0 13px;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__controls {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      &-item {
+        & + & {
+          position: relative;
+          margin-left: 35px;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 40px;
+            background: #5A5A74;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      &-link {
+        @media (min-width: 1024px) {
+          &:hover svg {
+            fill: #A4AC14;
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active svg {
+            fill: #A4AC14;
+          }
+        }
+        svg {
+          display: block;
+          width: 32px;
+          height: 32px;
+          fill: #fff;
+          @media (min-width: 1024px) {
+            transition: fill .2s ease;
+          }
+          @media (max-width: 1024px) {
+            transition: fill .1s ease;
+          }
+        }
+      }
+    }
+  }
+  &-catalog {
+    margin: 0 45px;
+    &__btn {
+      &-text {
+        font-size: 12px;
+        line-height: 15px;
+      }
+      &-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &-search {
+    max-width: 405px;
+    height: 48px;
+    width: 100%;
+    margin-right: 50px;
+    &__form {
+      width: 100%;
+      height: 100%;
+      background: #5A5A74;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18px 0 16px;
+    }
+    &__inp-wrapper {
+      width: 100%;
+      padding-right: 18px;
+    }
+    &__inp {
+      height: 100%;
+      width: 100%;
+      font-size: 12px;
+      line-height: 15px;
+      color: #fff;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    &__btn-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    &__btn {
+      width: 24px;
+      height: 24px;
+      @media (min-width: 1024px) {
+        &:hover {
+          svg {
+            fill: #A4AC14;
+          }
+        }
+      }
+      @media (max-width: 1024px) {
+        &:active {
+          svg {
+            fill: #A4AC14;
+          }
+        }
+      }
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: #fff;
+        @media (min-width: 1024px) {
+          transition: fill .2s ease;
+        }
+        @media (max-width: 1024px) {
+          transition: fill .1s ease;
+        }
+      }
+    }
+  }
+  &-schedule {
+    &__title {
+      font-size: 9px;
+      line-height: 11px;
+      color: #BEBEC8;
+      margin-bottom: 2px;
+    }
+    &__phone {
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 25px;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 4px;
+      @media (min-width: 1024px) {
+        transition: color .2s ease;
+        &:hover {
+          color: #A4AC14;
+        }
+      }
+      @media (max-width: 1024px) {
+        transition: color .1s ease;
+        &:active {
+          color: #A4AC14;
+        }
+      }
+    }
+    &__list {
+      position: relative;
+      &-title {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @media (min-width: 1024px) {
+          &:hover {
+            .header-schedule__list-icon svg {
+              fill: #fff;
+            }
+            .header-schedule__list-text {
+              color: #fff;
+              border-bottom-color: #fff;
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          &:active {
+            .header-schedule__list-icon svg {
+              fill: #fff;
+            }
+            .header-schedule__list-text {
+              color: #fff;
+              border-bottom-color: #fff;
+            }
+          }
+        }
+      }
+      &-icon {
+        margin-right: 9px;
+        svg {
+          display: block;
+          width: 15px;
+          height: 15px;
+          fill: #A4AC14;
+          @media (min-width: 1024px) {
+            transition: fill .2s ease;
+          }
+          @media (max-width: 1024px) {
+            transition: fill .1s ease;
+          }
+        }
+      }
+      &-text {
+        font-size: 9px;
+        line-height: 11px;
+        color: #A4AC14;
+        border-bottom: 1px dashed #A4AC14;
+        @media (min-width: 1024px) {
+          transition: all .2s ease;
+        }
+        @media (max-width: 1024px) {
+          transition: all .1s ease;
+        }
+      }
+    }
+  }
+}

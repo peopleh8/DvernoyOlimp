@@ -1,0 +1,98 @@
+.reviews {
+  padding: 135px 0 120px;
+  &__top {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-slider {
+    &__item {
+      padding-top: 30px;
+      &-inner {
+        display: flex;
+      }
+      &-quote {
+        margin-right: 7px;
+        svg {
+          display: block;
+          width: 80px;
+          height: 80px;
+          transform: translateY(-60%)
+        }
+      }
+      &-content {
+        max-width: 1055px;
+      }
+      &-desc {
+        font-size: 33px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #424255;
+        margin-bottom: 45px;
+      }
+      &-info {
+        display: flex;
+        align-items: center;
+      }
+      &-name {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 140%;
+        letter-spacing: -0.03em;
+        color: #414042;
+      }
+      &-rating {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        &[data-rating="0"] {
+          svg {
+            fill: #BEBEC8;
+          }
+        }
+        &[data-rating="5"] {
+          svg:nth-child(n + 1) {
+            fill: #F3C82F;
+          }
+        }
+        &[data-rating="4"] {
+          svg:nth-child(n + 2) {
+            fill: #F3C82F;
+          }
+        }
+        &[data-rating="3"] {
+          svg:nth-child(n + 3) {
+            fill: #F3C82F;
+          }
+        }
+        &[data-rating="2"] {
+          svg:nth-child(n + 4) {
+            fill: #F3C82F;
+          }
+        }
+        &[data-rating="1"] {
+          svg:nth-child(n + 5) {
+            fill: #F3C82F;
+          }
+        }
+        svg {
+          display: block;
+          width: 22px;
+          height: 21px;
+          fill: #BEBEC8;
+          &:not(:first-child) {
+            margin-right: 4px;
+          }
+        }
+      }
+      &-date {
+        font-size: 14px;
+        line-height: 160%;
+        letter-spacing: -0.02em;
+        color: #C1C1C1;
+        margin-top: 8px;
+      }
+    }
+  }
+}

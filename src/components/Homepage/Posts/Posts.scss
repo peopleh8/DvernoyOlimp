@@ -1,0 +1,9 @@
+.main-posts {
+  padding: 135px 0 120px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}

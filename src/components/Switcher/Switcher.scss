@@ -1,0 +1,37 @@
+.switcher {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 16px;
+    background: #D4DADE;
+  }
+  &__item {
+    font-size: 12px;
+    line-height: 15px;
+    color: #A4AC14;
+    text-transform: uppercase;
+    &.active {
+      color: #fff;
+    }
+    & + & {
+      margin-left: 22px;
+    }
+    @media (min-width: 1024px) {
+      transition: color .2s ease;
+      &:hover {
+        color: #fff;
+      }
+    }
+    @media (max-width: 1024px) {
+      transition: color .1s ease;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
