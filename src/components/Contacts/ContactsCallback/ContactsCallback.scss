@@ -7,9 +7,6 @@
     letter-spacing: -0.02em;
     margin-bottom: 30px;
   }
-  &__form {
-
-  }
   &__inner {
     display: flex;
     margin: 0 -30px;
@@ -55,6 +52,80 @@
     margin-right: 20px;
     a {
       color: #A4AC14;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .contacts-callback {
+    &__inner {
+      margin: 0 -10px;
+    }
+    &__inp-wrapper {
+      padding: 0 10px;
+    }
+    &__bot {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contacts-callback {
+    padding: 80px 0;
+    &__inner {
+      margin: 0 -15px;
+    }
+    &__inp-wrapper {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  .contacts-callback {
+    &__inner {
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    &__inp-wrapper {
+      padding: 0;
+      width: 100%;
+      &:last-child {
+        .contacts-callback__inp-inner {
+          width: 150px;
+        }
+      }
+      & + & {
+        margin-top: 15px;
+      }
+    }
+    &__bot {
+      flex-direction: column;
+    }
+    &__text {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &__btn {
+      width: 100%;
+      order: -1;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-callback {
+    &__label {
+      margin-bottom: 5px;
+    }
+    &__inp {
+      padding: 0 15px;
+    }
+    &__bot {
+      margin-top: 25px;
     }
   }
 }

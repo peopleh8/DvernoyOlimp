@@ -30,3 +30,52 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .about-mission {
+    &__inner {
+      margin: 0 -10px;
+    }
+    &__item {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about-mission {
+    padding: 80px 0;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__inner {
+      margin: 0 -15px;
+    }
+    &__item {
+      padding: 0 15px;
+      &-photo {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-mission {
+    &__inner {
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 100%;
+      padding: 0;
+      &-title {
+        font-size: 18px;
+        line-height: 140%;
+      }
+      & + & {
+        margin-top: 25px;
+      }
+    }
+  }
+}

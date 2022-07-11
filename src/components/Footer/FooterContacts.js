@@ -7,7 +7,10 @@ const FooterContacts = () => {
     <div className="footer__contacts footer-contacts">
       <div className="footer-contacts__title footer-title">КОНТАКТЫ</div>
       <a className="footer-contacts__phone" href="tel:380800339827">0 800 339 827</a>
-      <p className="footer-contacts__schedule">09:00-21:00 пн-пт 10:00-20:00 сб-вс</p>
+      <p className="footer-contacts__schedule">
+        <span>09:00-21:00 пн-пт</span>
+        <span>10:00-20:00 сб-вс</span>
+      </p>
       <a className="footer-contacts__email" href="mailto:dvernoyolimp@gmail.com">dvernoyolimp@gmail.com</a>
       <ul className="footer-contacts__social">
         <li className="footer-contacts__social-item">

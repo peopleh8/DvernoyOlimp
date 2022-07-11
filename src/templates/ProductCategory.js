@@ -1,11 +1,11 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/Layout/Layout'
 import Seo from '../components/seo'
 
 import ProductCategoryIntro from '../components/ProductCategory/Intro/Intro'
-import ProductCategoryContent from '../components/ProductCategory/ProductCategoryContent/ProductCategoryContent'
+import ProductCategoryContent from '../components/ProductCategoryContent/ProductCategoryContent'
 
 import ProductsSlider from '../components/ProductsSlider/ProductsSlider'
 import Callback from '../components/Callback/Callback'
@@ -17,9 +17,11 @@ import '../components/Layout/Breadcrumbs.scss'
 import PrefixProvider from '../context/PrefixContext'
 
 const ProductCategory = ({ pageContext }) => {
+  const [ isOpenFilter, setIsOpenFilter ] = useState(false)
+
   return (
     <PrefixProvider prefix={pageContext.prefix}>
-      <Layout>
+      <Layout isOpenFilter={isOpenFilter} setIsOpenFilter={setIsOpenFilter}>
         <Seo title="Product Category" />
         <nav className="breadcrumbs breadcrumbs-product-category">
           <div className="container">
@@ -43,8 +45,8 @@ const ProductCategory = ({ pageContext }) => {
           </div>
         </nav>
         <ProductCategoryIntro />
-        <ProductCategoryContent />
-        <ProductsSlider />
+        <ProductCategoryContent isSearchPage={false} isOpenFilter={isOpenFilter} setIsOpenFilter={setIsOpenFilter} />
+        <ProductsSlider className={'products-slider--viewed'} />
         <Callback />
         <SeoBlock />
         <BottomTabs />

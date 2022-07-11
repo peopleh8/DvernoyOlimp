@@ -16,15 +16,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#A4AC14`,
-        showSpinner: false,
-        trickle: false,
-        minimum: 0.1,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

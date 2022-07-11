@@ -80,6 +80,22 @@ const MainVideos = () => {
               }});
             gsap.to(currentSlide.current, .2, { force3D: true, opacity: 1, ease: 'Power2.easeOut', delay: .3 })
           }}
+          breakpoints={{
+            1366: {
+              spaceBetween: 60
+            },
+            992: {
+              spaceBetween: 10
+            },
+            481: {
+              spaceBetween: 30,
+              slidesPerView: 2
+            },
+            0: {
+              spaceBetween: 10,
+              slidesPerView: 1
+            }
+          }}
         >
           <SwiperSlide className="main-videos-slider__item">
             <div className="video">

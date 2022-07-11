@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { Link } from 'gatsby'
 
 import  { Pagination, Navigation, EffectFade } from 'swiper'
@@ -12,6 +12,8 @@ import 'swiper/scss/pagination'
 import 'swiper/scss/navigation'
 import 'swiper/scss/effect-fade'
 
+import { PrefixContext } from '../../../context/PrefixContext'
+
 import sprite from '../../../icons/sprite.svg'
 
 import door1 from '../../../images/door-1.png'
@@ -20,6 +22,8 @@ import door3 from '../../../images/door-3.png'
 import door4 from '../../../images/door-4.png'
 
 const Bestsellers = () => {
+  let prefix = useContext(PrefixContext)
+
   const totalSlidesCount = useRef(null)
   const currentSlide = useRef(null)
 
@@ -116,7 +120,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -147,7 +151,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -158,7 +162,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -187,7 +191,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -198,7 +202,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -226,7 +230,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -237,7 +241,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -257,7 +261,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -272,7 +276,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -303,7 +307,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -314,7 +318,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -343,7 +347,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -354,7 +358,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -382,7 +386,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -393,7 +397,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -418,7 +422,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -433,7 +437,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -464,7 +468,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -475,7 +479,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -504,7 +508,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -515,7 +519,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -543,7 +547,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -554,7 +558,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -574,7 +578,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -589,7 +593,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -620,7 +624,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -631,7 +635,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -660,7 +664,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -671,7 +675,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -699,7 +703,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -710,7 +714,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -735,7 +739,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -750,7 +754,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -781,7 +785,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -792,7 +796,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -821,7 +825,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -832,7 +836,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -860,7 +864,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -871,7 +875,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -891,7 +895,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -906,7 +910,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -937,7 +941,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -948,7 +952,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -977,7 +981,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -988,7 +992,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1016,7 +1020,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1027,7 +1031,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -1052,7 +1056,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1092,7 +1096,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1123,7 +1127,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1134,7 +1138,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1163,7 +1167,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1174,7 +1178,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1202,7 +1206,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1213,7 +1217,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -1233,7 +1237,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1248,7 +1252,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1279,7 +1283,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1290,7 +1294,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1319,7 +1323,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1330,7 +1334,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1358,7 +1362,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1369,7 +1373,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -1394,7 +1398,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1409,7 +1413,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1440,7 +1444,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1451,7 +1455,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1480,7 +1484,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1491,7 +1495,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1519,7 +1523,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1530,7 +1534,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -1550,7 +1554,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1565,7 +1569,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1596,7 +1600,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1607,7 +1611,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1636,7 +1640,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1647,7 +1651,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1675,7 +1679,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1686,7 +1690,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -1711,7 +1715,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1726,7 +1730,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1757,7 +1761,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1768,7 +1772,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1797,7 +1801,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1808,7 +1812,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1836,7 +1840,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1847,7 +1851,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -1867,7 +1871,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1882,7 +1886,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1913,7 +1917,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1924,7 +1928,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1953,7 +1957,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -1964,7 +1968,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -1992,7 +1996,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2003,7 +2007,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -2028,7 +2032,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2068,7 +2072,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2099,7 +2103,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2110,7 +2114,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2139,7 +2143,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2150,7 +2154,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2178,7 +2182,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2189,7 +2193,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -2209,7 +2213,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2224,7 +2228,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2255,7 +2259,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2266,7 +2270,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2295,7 +2299,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2306,7 +2310,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2334,7 +2338,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2345,7 +2349,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -2370,7 +2374,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2385,7 +2389,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2416,7 +2420,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2427,7 +2431,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2456,7 +2460,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2467,7 +2471,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2495,7 +2499,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2506,7 +2510,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -2526,7 +2530,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2541,7 +2545,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2572,7 +2576,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2583,7 +2587,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2612,7 +2616,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2623,7 +2627,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2651,7 +2655,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2662,7 +2666,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -2687,7 +2691,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2702,7 +2706,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2733,7 +2737,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2744,7 +2748,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2773,7 +2777,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2784,7 +2788,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2812,7 +2816,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2823,7 +2827,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -2843,7 +2847,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2858,7 +2862,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2889,7 +2893,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2900,7 +2904,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2929,7 +2933,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2940,7 +2944,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -2968,7 +2972,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -2979,7 +2983,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -3004,7 +3008,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3044,7 +3048,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3075,7 +3079,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3086,7 +3090,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3115,7 +3119,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3126,7 +3130,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3154,7 +3158,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3165,7 +3169,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -3185,7 +3189,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3200,7 +3204,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3231,7 +3235,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3242,7 +3246,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3271,7 +3275,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3282,7 +3286,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3310,7 +3314,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3321,7 +3325,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -3346,7 +3350,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3361,7 +3365,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3392,7 +3396,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3403,7 +3407,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3432,7 +3436,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3443,7 +3447,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3471,7 +3475,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3482,7 +3486,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -3502,7 +3506,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3517,7 +3521,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3548,7 +3552,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3559,7 +3563,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3588,7 +3592,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3599,7 +3603,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3627,7 +3631,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3638,7 +3642,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -3663,7 +3667,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3678,7 +3682,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3709,7 +3713,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3720,7 +3724,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3749,7 +3753,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3760,7 +3764,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3788,7 +3792,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3799,7 +3803,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <button className="product__scales">
                         <svg><use href={`${sprite}#scales`} /></svg>
                       </button>
@@ -3819,7 +3823,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3834,7 +3838,7 @@ const Bestsellers = () => {
                 <div className="bestsellers-slider-tab__item-inner">
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3865,7 +3869,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3876,7 +3880,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3905,7 +3909,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3916,7 +3920,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__code">
                           Код: <span>920193</span>
@@ -3944,7 +3948,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>
@@ -3955,7 +3959,7 @@ const Bestsellers = () => {
                   </div>
                   <div className="bestsellers-product product">
                     <div className="product__inner">
-                      <Link className="product__link" to="#" />
+                      <Link className="product__link" to={`${prefix}single-product/`} />
                       <div className="product__position">
                         <div className="product__labels">
                           <div className="product__label product__label--new">Новинка</div>
@@ -3980,7 +3984,7 @@ const Bestsellers = () => {
                         <div className="product__price">
                           141 254 грн
                         </div>
-                        <Link className="product__btn" to="#">
+                        <Link className="product__btn" to={`${prefix}single-product/`}>
                           <span className="product__btn-icon">
                             <svg><use href={`${sprite}#btn-cart`} /></svg>
                           </span>

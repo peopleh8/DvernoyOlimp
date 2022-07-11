@@ -27,3 +27,48 @@
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .partners {
+    padding-top: 190px;
+    &-slider {
+      &__item {
+        height: 140px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .partners {
+    padding-top: 140px;
+    &__title-wrapper {
+      margin-bottom: 40px;
+    }
+    &-slider {
+      &__item {
+        width: 235px;
+        height: 110px;
+      }
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  .partners {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 649px)  {
+  .partners {
+    &__title-wrapper {
+      margin-bottom: 30px;
+    }
+    &-slider {
+      &__item {
+        width: 200px;
+      }
+    }
+  }
+}

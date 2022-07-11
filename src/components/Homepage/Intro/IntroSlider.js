@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-
 import  { Pagination, Navigation, EffectFade } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -56,56 +55,22 @@ const IntroSlider = () => {
           gsap.to(currentSlide.current, .2, { force3D: true, opacity: 1, ease: 'Power2.easeOut', delay: .3 })
         }}
       >
-        <SwiperSlide className="main-intro__slider-item">
-          <img src={introSliderImg} alt="" width={1005} height={380} />
-          <div className="main-intro__slider-info">
-            <h1 className="main-intro__slider-title">Каталог дверей</h1>
-            <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
-            <button className="main-intro__slider-btn btn" type="button">
-              <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="main-intro__slider-item">
-          <img src={introSliderImg} alt="" width={1005} height={380} />
-          <div className="main-intro__slider-info">
-            <h1 className="main-intro__slider-title">Каталог дверей1</h1>
-            <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
-            <button className="main-intro__slider-btn btn" type="button">
-              <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="main-intro__slider-item">
-          <img src={introSliderImg} alt="" width={1005} height={380} />
-          <div className="main-intro__slider-info">
-            <h1 className="main-intro__slider-title">Каталог дверей2</h1>
-            <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
-            <button className="main-intro__slider-btn btn" type="button">
-              <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="main-intro__slider-item">
-          <img src={introSliderImg} alt="" width={1005} height={380} />
-          <div className="main-intro__slider-info">
-            <h1 className="main-intro__slider-title">Каталог дверей3</h1>
-            <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
-            <button className="main-intro__slider-btn btn" type="button">
-              <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="main-intro__slider-item">
-          <img src={introSliderImg} alt="" width={1005} height={380} />
-          <div className="main-intro__slider-info">
-            <h1 className="main-intro__slider-title">Каталог дверей3</h1>
-            <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
-            <button className="main-intro__slider-btn btn" type="button">
-              <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
-            </button>
-          </div>
-        </SwiperSlide>
+        {
+          new Array(5).fill('').map((_, index) => {
+            return (
+              <SwiperSlide className="main-intro__slider-item" key={index}>
+                <img src={introSliderImg} alt="" width={1005} height={380} />
+                <div className="main-intro__slider-info">
+                  <h1 className="main-intro__slider-title">Каталог дверей</h1>
+                  <p className="main-intro__slider-desc">Загляните в любой салон Дверного Олимпа: каждый из них - это современный супермаркет дверей, в котором вы получите информативную консультацию</p>
+                  <button className="main-intro__slider-btn btn" type="button">
+                    <span className="main-intro__slider-btn-text btn__text">Узнать больше</span>
+                  </button>
+                </div>
+              </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
       <div className="main-intro__slider-controls">
         <div className="main-intro__slider-counter slider-counter">

@@ -1,8 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { Link } from 'gatsby'
-
 import gsap from 'gsap'
-
 import  { Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -12,6 +10,8 @@ import 'swiper/scss'
 import 'swiper/scss/pagination'
 import 'swiper/scss/navigation'
 
+import { PrefixContext } from '../../../context/PrefixContext'
+
 import sprite from '../../../icons/sprite.svg'
 
 import post1 from '../../../images/post-1.jpg'
@@ -19,6 +19,8 @@ import post2 from '../../../images/post-2.jpg'
 import post3 from '../../../images/post-3.jpg'
 
 const MainPosts = () => {
+  let prefix = useContext(PrefixContext)
+  
   const currentSlide = useRef(null)
   const totalSlidesCount = useRef(null)
 
@@ -82,11 +84,31 @@ const MainPosts = () => {
               }});
             gsap.to(currentSlide.current, .2, { force3D: true, opacity: 1, ease: 'Power2.easeOut', delay: .3 })
           }}
+          breakpoints={{
+            1366: {
+              spaceBetween: 30,
+            },
+            992: {
+              spaceBetween: 20,
+            },
+            650: {
+              spaceBetween: 30,
+              slidesPerView: 3
+            },
+            481: {
+              spaceBetween: 10,
+              slidesPerView: 2
+            },
+            0: {
+              spaceBetween: 10,
+              slidesPerView: 1
+            }
+          }}
         >
           <SwiperSlide className="main-posts-slider__item">
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post1} alt="" width={410} height={295} />
                 </div>
@@ -98,7 +120,7 @@ const MainPosts = () => {
           <SwiperSlide>
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post2} alt="" width={410} height={295} />
                 </div>
@@ -110,7 +132,7 @@ const MainPosts = () => {
           <SwiperSlide>
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post3} alt="" width={410} height={295} />
                 </div>
@@ -122,7 +144,7 @@ const MainPosts = () => {
           <SwiperSlide>
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post1} alt="" width={410} height={295} />
                 </div>
@@ -134,7 +156,7 @@ const MainPosts = () => {
           <SwiperSlide>
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post2} alt="" width={410} height={295} />
                 </div>
@@ -146,7 +168,7 @@ const MainPosts = () => {
           <SwiperSlide>
             <div className="post">
               <div className="post__inner">
-                <Link className="post__link" to="#" />
+                <Link className="post__link" to={`${prefix}single-post/`} />
                 <div className="post__preview">
                   <img src={post3} alt="" width={410} height={295} />
                 </div>

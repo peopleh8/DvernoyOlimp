@@ -1,47 +1,33 @@
-import React  from 'react'
+import React, { useState, useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './MainReasons.scss'
+
+import MainReasonsList from './MainReasonsList'
+import MainReasonsSlider from './MainReasonsSlider'
 
 import reasonsBg from '../../../images/reasons-bg.png'
 
 const MainReasons = () => {
+  const [ isVisibleSlider, setIsVisibleSlider ] = useState(false)
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 481px)': () => setIsVisibleSlider(false),
+      '(max-width: 480px)': () => setIsVisibleSlider(true)
+    })
+  }, [])
+
   return (
     <div className="main-reasons">
       <img src={reasonsBg} alt="" width={1920} height={690} />
       <div className="container">
         <div className="main-reasons__title title title--light">6 причин выбрать Дверной Олимп</div>
-        <div className="main-reasons__inner">
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Более 10 лет успешной работы</p>
-            </div>
-          </div>
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Продукция от 52 лучших производителей</p>
-            </div>
-          </div>
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Изготовление дверей по индивидуальным размерам</p>
-            </div>
-          </div>
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Гарантия до 3-х лет</p>
-            </div>
-          </div>
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Любая форма оплаты</p>
-            </div>
-          </div>
-          <div className="main-reasons__item">
-            <div className="main-reasons__item-inner">
-              <p className="main-reasons__item-desc">Более 450 000 счастливых клиентов</p>
-            </div>
-          </div>
-        </div>
+        { !isVisibleSlider && <MainReasonsList /> }
+        { isVisibleSlider && <MainReasonsSlider /> }
       </div>
     </div>
   )

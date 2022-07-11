@@ -6,10 +6,10 @@ import './Layout.scss'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isOpenFilter, setIsOpenFilter }) => {
   return (
     <div className="wrapper">
-      <Header />
+      <Header isOpenFilter={isOpenFilter} setIsOpenFilter={setIsOpenFilter} />
       <main className="main">{children}</main>
       <Footer />
     </div>

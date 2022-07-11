@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import { Navigation, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -8,6 +8,8 @@ import 'swiper/scss/navigation'
 import 'swiper/scss/autoplay'
 
 import './Intro.scss'
+
+import { PrefixContext } from '../../../context/PrefixContext'
 
 import sprite from '../../../icons/sprite.svg'
 
@@ -20,6 +22,8 @@ import productCat6 from '../../../images/product-cat-6.svg'
 import productCat7 from '../../../images/product-cat-5.svg'
 
 const ProductCategoryIntro = () => {
+  let prefix = useContext(PrefixContext)
+  
   return (
     <section className="product-category-intro">
       <div className="container">
@@ -41,51 +45,62 @@ const ProductCategoryIntro = () => {
               prevEl: '.product-category-intro-slider__prev',
               nextEl: '.product-category-intro-slider__next'
             }}
+            breakpoints={{
+              992: {
+                slidesPerView: 7
+              },
+              745: {
+                slidesPerView: 5
+              },
+              0: {
+                slidesPerView: 2.7
+              }
+            }}
           >
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat1} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">В наличии</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat2} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">На улицу</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat3} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">В квартиру</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat4} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">Нестандартный размер</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat5} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">С терморазрывом</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat6} alt=""/>
               </div>
               <div className="product-category-intro-slider__title">Полуторные</div>
             </SwiperSlide>
             <SwiperSlide className="product-category-intro-slider__item">
-              <Link className="product-category-intro-slider__link" to="#" />
+              <Link className="product-category-intro-slider__link" to={`${prefix}product-category/`} />
               <div className="product-category-intro-slider__icon">
                 <img src={productCat7} alt=""/>
               </div>

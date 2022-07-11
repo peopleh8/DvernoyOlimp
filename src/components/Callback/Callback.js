@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import InputMask from 'react-input-mask'
 
 import './Callback.scss'
 
@@ -20,8 +21,11 @@ const Callback = () => {
               <div className="callback__inp-wrapper">
                 <label className="callback__label" htmlFor="callback-phone">Ваш номер телефона</label>
                 <div className="callback__inp-inner">
-                  <input
+                  <InputMask
                     className="callback__inp"
+                    id="callback-phone"
+                    mask="+38 (099) 999-99-99"
+                    maskPlaceholder={null}
                     type="tel"
                     name="phone"
                     autoComplete="off"

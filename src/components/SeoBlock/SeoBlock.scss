@@ -63,3 +63,41 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .seo-block {
+    padding: 80px 0;
+    &__article {
+      height: 215px;
+      p {
+        margin-bottom: 10px;
+      }
+      h2, h3, h4, h5, h6 {
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 19px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+      h5 {
+        font-size: 17px;
+      }
+      h6 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px)  {
+  .seo-block {
+    &__article {
+      height: 250px;
+    }
+  }
+}

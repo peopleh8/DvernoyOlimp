@@ -7,3 +7,28 @@
     margin-bottom: 50px;
   }
 }
+
+@media (max-width: 991px) {
+  .main-videos {
+    padding-top: 80px;
+    &__top {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  .main-videos {
+    position: relative;
+    padding: 80px 0 75px;
+    &-slider {
+      &__controls {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  }
+}

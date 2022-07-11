@@ -12,4 +12,49 @@
     width: 50%;
     padding: 30px;
   }
+  &__slider-wrapper {
+    position: relative;
+    display: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .about-videoblog {
+    &__inner {
+      margin: -20px -10px;
+    }
+    &__item {
+      padding: 20px 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about-videoblog {
+    padding: 80px 0;
+    &__inner {
+      margin: -15px;
+    }
+    &__item {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-videoblog {
+    &__inner {
+      display: none;
+    }
+    &__slider-wrapper {
+      display: block;
+    }
+    &__item {
+      padding: 0;
+      width: 100%;
+    }
+    &__controls {
+      margin-top: 55px;
+    }
+  }
 }

@@ -1,4 +1,5 @@
-import React  from 'react'
+import React, { useEffect } from 'react'
+import * as axios from 'axios'
 
 import Layout from '../components/Layout/Layout'
 import Seo from '../components/seo'
@@ -23,7 +24,23 @@ import PrefixProvider from '../context/PrefixContext'
 import { isBrowser } from '../utils/isBrowser'
 
 const Homepage = ({ pageContext }) => {
+  // useEffect(() => {
+  //   axios({
+  //     method: 'post',
+  //     url: 'https://api.monobank.ua/api/merchant/invoice/create',
+  //     headers: {
+  //       'X-Token': 'uvDMAB5KxI9K5E50pfj_NnYsAF-oGDmT0SMpfbXVO9vk'
+  //     },
+  //     data: {
+  //       amount: 4200,
+  //     }
+  //   })
+  //     .then(({ data }) => window.location.href = data.pageUrl)
+  // }, [])
+
   if (!isBrowser()) return null
+
+
 
   return (
     <PrefixProvider prefix={pageContext.prefix}>

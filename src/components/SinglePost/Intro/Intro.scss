@@ -14,6 +14,13 @@
   &__date {
     margin-right: 45px;
   }
+  &__preview {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &__share {
     margin-top: 40px;
     display: flex;
@@ -70,6 +77,38 @@
         @media (max-width: 1024px) {
           transition: fill .1s ease;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .single-post-intro {
+    padding-bottom: 80px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .single-post-intro {
+    padding-bottom: 65px;
+    &__top {
+      margin-bottom: 20px;
+    }
+    &__info {
+      margin-bottom: 20px;
+    }
+    &__preview {
+      height: 220px;
+    }
+    &__share {
+      margin-top: 25px;
+      flex-direction: column;
+      align-items: flex-start;
+      &-text {
+        margin: 0 0 10px 0;
       }
     }
   }
